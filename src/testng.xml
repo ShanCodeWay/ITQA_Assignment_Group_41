@@ -1,0 +1,12 @@
+<suite name="TestSuite">
+    <test name="UI Tests">
+        <classes>
+            <class name="testcases.UITests"/>
+        </classes>
+    </test>
+    <test name="API Tests">
+        <classes>
+            <class name="testcases.APITests"/>
+        </classes>
+    </test>
+</suite>
