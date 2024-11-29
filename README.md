@@ -29,6 +29,7 @@
 <h2>🤝 Meet the Team</h2>
 <p class="animate-fade-in">We are a collaborative team, each member contributing their expertise and enthusiasm to ensure the success of the project:</p>
 <ul>
+    <li><a href="https://github.com/ShanCodeWay" target="_blank">Darshana Wijebahu</a></li>
     <li><a href="https://github.com/tharushi99k" target="_blank">Tharushi Nishshanka</a></li>
     <li><a href="https://github.com/thamodhya" target="_blank">Thamodhya Bandara</a></li>
     <li><a href="https://github.com/Heshanisc" target="_blank">Heshani Chandrasena</a></li>
