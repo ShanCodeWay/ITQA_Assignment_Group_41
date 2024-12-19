@@ -23,14 +23,28 @@
       <groupId>io.cucumber</groupId>
       <artifactId>cucumber-java</artifactId>
       <version>7.14.0</version>
+      <scope>test</scope>
     </dependency>
     <!-- Cucumber TestNG dependency -->
     <dependency>
       <groupId>io.cucumber</groupId>
       <artifactId>cucumber-testng</artifactId>
       <version>7.14.0</version>
+      <scope>test</scope>
     </dependency>
-
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-spring</artifactId>
+      <version>7.14.0</version>
+      <scope>test</scope>
+    </dependency>
+    <!-- Cucumber JUnit Dependencies (Optional, for reporting) -->
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-java8</artifactId>
+      <version>7.14.0</version>
+      <scope>test</scope>
+    </dependency>
     <!-- Selenium dependencies -->
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
