@@ -1,69 +1,78 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
+
   <groupId>com.example</groupId>
   <artifactId>ITQA_Assignment_Group_41</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>ITQA_Assignment_Group_41</name>
   <url>http://maven.apache.org</url>
+
   <dependencies>
+    <!-- JUnit 4 dependency -->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
+      <version>4.13.2</version> <!-- Latest version of JUnit 4 -->
       <scope>test</scope>
     </dependency>
 
-      <!-- Cucumber dependencies -->
-      <dependency>
-        <groupId>io.cucumber</groupId>
-        <artifactId>cucumber-java</artifactId>
-        <version>6.11.0</version>
-      </dependency>
-      <dependency>
-        <groupId>io.cucumber</groupId>
-        <artifactId>cucumber-spring</artifactId>
-        <version>6.11.0</version>
-      </dependency>
+    <!-- Cucumber dependencies -->
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-java</artifactId>
+      <version>7.14.0</version>
+    </dependency>
+    <!-- Cucumber TestNG dependency -->
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-testng</artifactId>
+      <version>7.14.0</version>
+    </dependency>
 
-      <!-- Selenium dependencies -->
-      <dependency>
-        <groupId>org.seleniumhq.selenium</groupId>
-        <artifactId>selenium-java</artifactId>
-        <version>3.141.59</version>
-      </dependency>
+    <!-- Selenium dependencies -->
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-java</artifactId>
+      <version>3.141.59</version>
+    </dependency>
 
-      <!-- RestAssured dependencies -->
-      <dependency>
-        <groupId>io.rest-assured</groupId>
-        <artifactId>rest-assured</artifactId>
-        <version>4.5.0</version>
-      </dependency>
+    <!-- RestAssured dependencies -->
+    <dependency>
+      <groupId>io.rest-assured</groupId>
+      <artifactId>rest-assured</artifactId>
+      <version>4.5.0</version>
+    </dependency>
 
-      <!-- TestNG dependencies -->
-      <dependency>
-        <groupId>org.testng</groupId>
-        <artifactId>testng</artifactId>
-        <version>7.4.0</version>
-        <scope>test</scope>
-      </dependency>
+    <!-- SLF4J Simple logger -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-simple</artifactId>
+      <version>1.7.36</version>
+    </dependency>
 
-      <!-- Cucumber TestNG Integration -->
-      <dependency>
-        <groupId>io.cucumber</groupId>
-        <artifactId>cucumber-testng</artifactId>
-        <version>6.11.0</version>
-      </dependency>
-    </dependencies>
+    <!-- TestNG dependencies -->
+    <dependency>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
+      <version>7.7.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
   <build>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.2.5</version>  <!-- Or try a newer version -->
+        <version>3.2.5</version>
+        <configuration>
+          <suiteXmlFiles>
+            <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile> <!-- Reference TestNG XML file if applicable -->
+          </suiteXmlFiles>
+        </configuration>
       </plugin>
     </plugins>
   </build>
-
 </project>
