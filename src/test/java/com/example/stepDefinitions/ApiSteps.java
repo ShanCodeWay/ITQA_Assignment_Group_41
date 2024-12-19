@@ -1,4 +1,4 @@
-package com.example.steps;
+package com.example.stepDefinitions;
 
 import io.cucumber.datatable.DataTable;
 import io.restassured.RestAssured;

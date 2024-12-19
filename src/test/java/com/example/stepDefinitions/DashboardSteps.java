@@ -1,4 +1,4 @@
-package com.example.steps;
+package com.example.stepDefinitions;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
