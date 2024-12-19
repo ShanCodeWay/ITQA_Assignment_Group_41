@@ -1,12 +1,13 @@
-<suite name="TestSuite">
-    <test name="UI Tests">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="APITests">
+    <test name="CucumberTests">
         <classes>
-            <class name="testcases.UITests"/>
+            <class name="com.example.tests.CucumberTestRunner" />
         </classes>
     </test>
-    <test name="API Tests">
+    <test name="RestAssuredTests">
         <classes>
-            <class name="testcases.APITests"/>
+            <class name="com.example.tests.ApiTests" />
         </classes>
     </test>
 </suite>
