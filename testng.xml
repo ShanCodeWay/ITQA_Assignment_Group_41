@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="D:/github/personal/ITQA_Assignment_Group_41">
+        <classes>
+            <class name="apiTests.GetBookTests">
+                <methods>
+                    <include name="testGetAllBooks"/>
+                    <include name="testGetSingleBook"/>
+                </methods>
+            </class>
+            <class name="apiTests.PostBookTests">
+                <methods>
+                    <include name="testAddBook"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
