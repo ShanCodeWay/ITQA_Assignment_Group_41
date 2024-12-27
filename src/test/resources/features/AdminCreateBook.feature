@@ -4,13 +4,14 @@ Feature: Admin Create Book
     Given Admin has the base URI set to "http://localhost:7081"
     And Admin authenticate as "admin" with password "password"
     When Admin tries to create a book with title "Unique Book" and author "Author Name"
-    Then Admin should receive a successful response with status code 200
+    Then Admin should receive a successful response with status code 201
 
   Scenario: Admin tries to create a book that already exists
     Given Admin has the base URI set to "http://localhost:7081"
     And Admin authenticate as "admin" with password "password"
     When Admin tries to create a book with title "Unique Book" and author "Author Name"
-    Then BUG DETECTED: Admin should see a log that the book already exists
+    Then Admin should receive a Book Already Exists response with status code 208
+
 
   Scenario: Admin tries to create a book without a title
     Given Admin has the base URI set to "http://localhost:7081"
