@@ -129,7 +129,7 @@ public class AdminCreateBookSteps {
                 .when()
                 .post("/api/books");
         commonValidationSteps.setLastResponse(lastResponse);
-        System.out.println("Response: " + lastResponse.asString());
+        System.out.println("admin_tries_to_create_a_book_without_a_title_and_with_author Response: " + lastResponse.asString());
 
     }
     @When("Admin tries to create a book with title {string} and without an author")
