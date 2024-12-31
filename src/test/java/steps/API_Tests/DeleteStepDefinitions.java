@@ -71,8 +71,8 @@ public class DeleteStepDefinitions {
         commonSteps.setLastResponse(lastResponse);
     }
 
-    @Then("User should receive a successful response with status code {int}")
-    public void User_should_receive_a_successful_response_with_status_code(int statusCode) {
+    @Then("User should receive a successful response with status code {int} for operation")
+    public void User_should_receive_a_successful_response_with_status_code_for_operation(int statusCode) {
         Assert.assertNotNull("No response received!", lastResponse);
         Assert.assertEquals(statusCode, lastResponse.getStatusCode());
     }
