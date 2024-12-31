@@ -1,4 +1,4 @@
-package steps.users;
+package steps.admin;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
@@ -9,7 +9,7 @@ import steps.CommonValidationSteps;
 
 import static io.restassured.RestAssured.given;
 
-public class UserPostDeleteGetBookSteps {
+public class AdminPostDeleteGetBookSteps {
 
     private Response lastResponse;
     private String currentUsername;
@@ -17,7 +17,7 @@ public class UserPostDeleteGetBookSteps {
     private int bookId;
     private final CommonValidationSteps commonValidationSteps;
 
-    public UserPostDeleteGetBookSteps(CommonValidationSteps commonValidationSteps) {
+    public AdminPostDeleteGetBookSteps(CommonValidationSteps commonValidationSteps) {
         this.commonValidationSteps = commonValidationSteps;
     }
 
