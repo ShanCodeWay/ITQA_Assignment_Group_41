@@ -180,19 +180,19 @@ public class AdminCreateBookSteps {
         commonValidationSteps.setLastResponse(lastResponse);
     }
 
-    @Then("Admin should receive a failed response with status code {int} and error message {string}")
-    public void admin_should_receive_a_failed_response_with_status_code_and_error_message(Integer statusCode, String errorMessage) {
-        System.out.println("Admin should receive a failed response with status code " + statusCode + " and error message " + errorMessage);
-
-        int actualStatusCode = lastResponse.getStatusCode();
-        String actualErrorMessage = lastResponse.jsonPath().getString("errorMessage");
-
-        // Check if status code matches
-        assert actualStatusCode == statusCode : "Expected status code " + statusCode + " but got " + actualStatusCode;
-
-        // Check if error message matches
-        assert actualErrorMessage != null && actualErrorMessage.contains(errorMessage) :
-                "Expected error message to contain '" + errorMessage + "' but got '" + actualErrorMessage + "'";
-    }
+//    @Then("Admin should receive a failed response with status code {int} and error message {string}")
+//    public void admin_should_receive_a_failed_response_with_status_code_and_error_message(Integer statusCode, String errorMessage) {
+//        System.out.println("Admin should receive a failed response with status code " + statusCode + " and error message " + errorMessage);
+//
+//        int actualStatusCode = lastResponse.getStatusCode();
+//        String actualErrorMessage = lastResponse.jsonPath().getString("errorMessage");
+//
+//        // Check if status code matches
+//        assert actualStatusCode == statusCode : "Expected status code " + statusCode + " but got " + actualStatusCode;
+//
+//        // Check if error message matches
+//        assert actualErrorMessage != null && actualErrorMessage.contains(errorMessage) :
+//                "Expected error message to contain '" + errorMessage + "' but got '" + actualErrorMessage + "'";
+//    }
 
 }
