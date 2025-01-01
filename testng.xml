@@ -5,9 +5,11 @@
         <listener class-name="org.testng.reporters.XMLReporter"/>
     </listeners>
 
-    <test name="Dashboard Tests">
+    <test name="UI Tests">
         <classes>
             <class name="DashboardTests" />
+            <class name="AddEmployeeTest" />
+            <class name="AddReportTest" />
         </classes>
     </test>
 </suite>
