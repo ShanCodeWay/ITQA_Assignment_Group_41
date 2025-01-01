@@ -45,6 +45,60 @@ public class AddEmployeeTest extends BaseTest {
             WebElement lastNameField = driver.findElement(By.xpath("//input[@name='lastName']"));
             lastNameField.sendKeys("Doe");
 
+            // Locate and interact with the checkbox
+            WebElement checkboxWrapper = driver.findElement(By.xpath("/html/body/div/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]/div[2]/div"));
+            checkboxWrapper.click();
+
+            try {
+                WebDriverWait waitt = new WebDriverWait(driver, Duration.ofSeconds(20));
+
+                // Wait for the additional fields to become visible
+                System.out.println("Waiting for additional fields to appear...");
+                WebElement usernameField = waitt.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]/div[3]/div/div[1]/div/div[2]/input")));
+                System.out.println("Additional fields are visible.");
+
+                // Enter text in the Username textbox
+                System.out.println("Entering username...");
+                usernameField.sendKeys("test_user");
+                System.out.println("Username entered successfully.");
+
+                // Select "Enabled" or "Disabled" radio button
+                System.out.println("Selecting the 'Enabled' radio button...");
+                WebElement enabledRadioButton = driver.findElement(By.xpath("/html/body/div/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]/div[3]/div/div[2]/div/div[2]/div[1]/div[2]/div/label/span"));
+                enabledRadioButton.click();
+                System.out.println("'Enabled' radio button selected successfully.");
+
+                // Enter text in Password and Confirm Password textboxes
+                System.out.println("Entering password...");
+                WebElement passwordField = driver.findElement(By.xpath("/html/body/div/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]/div[4]/div/div[1]/div/div[2]/input"));
+                passwordField.sendKeys("SecurePassword123");
+                System.out.println("Password entered successfully.");
+
+                System.out.println("Confirming password...");
+                WebElement confirmPasswordField = driver.findElement(By.xpath("/html/body/div/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]/div[4]/div/div[2]/div/div[2]/input"));
+                confirmPasswordField.sendKeys("SecurePassword123");
+                System.out.println("Confirm password entered successfully.");
+
+            } catch (Exception e) {
+                System.err.println("An error occurred: " + e.getMessage());
+                Assert.fail("Test failed due to an exception.");
+            }
+
+
+            try {
+                // Locate the file input element (usually of type "file")
+                WebElement uploadElement = driver.findElement(By.xpath("//input[@type='file']"));
+
+                // Provide the absolute path to the image file
+                String imagePath = "C:\\Users\\thamodhya\\Downloads\\download.jpg";
+                uploadElement.sendKeys(imagePath);
+
+                System.out.println("Image uploaded successfully.");
+            } catch (Exception e) {
+                System.err.println("Failed to upload image: " + e.getMessage());
+                Assert.fail("Image upload failed.");
+            }
+
 
             WebElement saveButton = driver.findElement(By.xpath("//button[@type='submit']"));
             saveButton.click();
@@ -107,4 +161,3 @@ public class AddEmployeeTest extends BaseTest {
         System.out.println("Login successful.");
     }
 }
-
