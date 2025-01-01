@@ -66,7 +66,7 @@ public class AdminGetBookSteps {
         commonValidationSteps.setLastResponse(lastResponse);
     }
 
-    @Then("Admin should receive a failed response with status code {int} and error message {string}")
+    @Then("Admin should receive a failed response to get book with status code {int} and error message {string}")
     public void admin_should_receive_a_failed_response_with_status_code_and_error_message(Integer statusCode, String errorMessage) {
         int actualStatusCode = lastResponse.getStatusCode();
         assert actualStatusCode == statusCode : "Expected status code " + statusCode + " but got " + actualStatusCode;
