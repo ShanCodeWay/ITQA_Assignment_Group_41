@@ -8,6 +8,8 @@
     <test name="Dashboard Tests">
         <classes>
             <class name="DashboardTests" />
+            <class name="AddJobTitleTest" />
+            <class name="AddWorkShiftTest" />
         </classes>
     </test>
 </suite>
