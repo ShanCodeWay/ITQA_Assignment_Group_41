@@ -179,6 +179,25 @@ public class AdminCreateBookSteps {
                 .post("/api/books");
         commonValidationSteps.setLastResponse(lastResponse);
     }
+
+    @When("Admin tries to create a book with title {string}, and author {string} without credentials")
+    public void admin_tries_to_create_a_book_with_title_and_author_without_credentials(String title, String author) {
+        System.out.println("Admin tries to create a book with title '" + title + "' and author '" + author + "' without providing credentials");
+
+        // Ensure the request is made without authentication
+        lastResponse = given()
+                .header("Content-Type", "application/json")
+                .body("{\"title\": \"" + title + "\", \"author\": \"" + author + "\"}")
+                .when()
+                .post("/api/books");
+
+        // Log the response for debugging purposes
+        System.out.println("Response: " + lastResponse.asString());
+        System.out.println("Status Code: " + lastResponse.getStatusCode());
+
+        // Pass the response to common validation steps for further checks
+        commonValidationSteps.setLastResponse(lastResponse);
+    }
 ////
 //    @Then("Admin should receive a failed response with status code {int} and error message {string}")
 //    public void admin_should_receive_a_failed_response_with_status_code_and_error_message(Integer statusCode, String errorMessage) {

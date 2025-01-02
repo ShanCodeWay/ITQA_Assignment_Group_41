@@ -70,4 +70,20 @@ public class CommonValidationSteps {
             System.err.println("Error message not found in the response body!");
         }
     }
+
+    @Then("Admin should receive a failed response with status code {int}")
+    public void adminShouldReceiveAFailedResponseWithStatusCode(int expectedStatusCode) {
+        Assert.assertNotNull("No response received! Ensure setLastResponse() is called.", lastResponse);
+
+        int actualStatusCode = lastResponse.getStatusCode();
+        String responseBody = lastResponse.getBody().asString();
+
+        // Log the response details
+        System.out.println("Admin should receive a failed response with status code: " + expectedStatusCode);
+        System.out.println("Actual response body: " + responseBody);
+
+        // Assert status code
+        Assert.assertEquals("Unexpected status code received!", expectedStatusCode, actualStatusCode);
+    }
+
 }

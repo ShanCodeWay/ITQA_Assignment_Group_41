@@ -10,6 +10,8 @@
             <class name="DashboardTests" />
             <class name="AddEmployeeTest" />
             <class name="AddReportTest" />
+            <class name="ApplyLeaveTest" />
+            <class name="ValidateLeaveStatusTest" />
         </classes>
     </test>
 </suite>
