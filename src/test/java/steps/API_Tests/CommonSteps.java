@@ -18,7 +18,7 @@ public class CommonSteps {
     }
 
     @Then("Admin should receive a failed response with status code {int} and error message {string} for operation")
-    public void Admin_should_receive_a_failed_response_with_status_code_and_error_message(int statusCode, String errorMessage) {
+    public void Admin_should_receive_a_failed_response_with_status_code_and_error_message_for_operation(int statusCode, String errorMessage) {
         System.out.println("Admin should receive a failed response with status code " + statusCode + " and error message " + errorMessage);
         String responseBody = lastResponse.asString();
         System.out.println("Admin should receive a failed responseBody with  " + lastResponse);
@@ -39,7 +39,7 @@ public class CommonSteps {
     }
 
     @Then("User should receive a failed response with status code {int} and error message {string} for operation")
-    public void User_should_receive_a_failed_response_with_status_code_and_error_message(int statusCode, String errorMessage) {
+    public void User_should_receive_a_failed_response_with_status_code_and_error_message_for_operation(int statusCode, String errorMessage) {
         System.out.println("User should receive a failed response with status code " + statusCode + " and error message " + errorMessage);
         String responseBody = lastResponse.asString();
         System.out.println("User should receive a failed responseBody with  " + lastResponse);

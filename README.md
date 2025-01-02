@@ -80,7 +80,7 @@
 </ul>
 
 <h2>🚀 Let’s Collaborate!</h2>
-<p>We are excited to work together and create a comprehensive, automated testing solution. Feel free to explore our progress on <a href="https://github.com/" target="_blank">GitHub</a> and reach out through our profiles.</p>
+<p>We are excited to work together and create a comprehensive, automated testing solution. Feel free to explore our progress on <a href="https://github.com/ShanCodeWay/ITQA_Assignment_Group_41/blob/main/ReadmeWorkDistribution.md" target="_blank">GitHub</a> and reach out through our profiles.</p>
 
 </body>
 </html>
