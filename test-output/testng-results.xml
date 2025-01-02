@@ -1,49 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-27T20:54:10 IST" name="OrangeHRM Test Suite" finished-at="2024-12-27T20:54:41 IST" duration-ms="30540">
+  <suite started-at="2025-01-02T21:38:38 IST" name="OrangeHRM Test Suite" finished-at="2025-01-02T21:40:21 IST" duration-ms="102263">
     <groups>
     </groups>
-    <test started-at="2024-12-27T20:54:10 IST" name="Dashboard Tests" finished-at="2024-12-27T20:54:41 IST" duration-ms="30540">
-      <class name="DashboardTests">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:DashboardTests@22555ebf]" started-at="2024-12-27T20:54:10 IST" name="setUp" finished-at="2024-12-27T20:54:15 IST" duration-ms="4873" status="PASS">
+    <test started-at="2025-01-02T21:38:38 IST" name="Dashboard Tests" finished-at="2025-01-02T21:40:21 IST" duration-ms="102263">
+      <class name="AddJobTitleTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:AddJobTitleTest@62230c58]" started-at="2025-01-02T21:39:42 IST" name="setUp" finished-at="2025-01-02T21:39:50 IST" duration-ms="8210" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="validateWidgetNavigation()[pri:0, instance:DashboardTests@22555ebf]" started-at="2024-12-27T20:54:15 IST" name="validateWidgetNavigation" finished-at="2024-12-27T20:54:24 IST" duration-ms="8846" status="PASS">
+        <test-method signature="testAddJobTitle()[pri:0, instance:AddJobTitleTest@62230c58]" started-at="2025-01-02T21:39:50 IST" name="testAddJobTitle" finished-at="2025-01-02T21:39:58 IST" duration-ms="8694" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddJobTitle -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AddJobTitleTest@62230c58]" started-at="2025-01-02T21:39:58 IST" name="tearDown" finished-at="2025-01-02T21:39:59 IST" duration-ms="991" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- AddJobTitleTest -->
+      <class name="DashboardTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:DashboardTests@757acd7b]" started-at="2025-01-02T21:38:39 IST" name="setUp" finished-at="2025-01-02T21:38:55 IST" duration-ms="16885" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="validateWidgetNavigation()[pri:0, instance:DashboardTests@757acd7b]" started-at="2025-01-02T21:38:55 IST" name="validateWidgetNavigation" finished-at="2025-01-02T21:39:13 IST" duration-ms="17285" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateWidgetNavigation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:DashboardTests@22555ebf]" started-at="2024-12-27T20:54:24 IST" name="tearDown" finished-at="2024-12-27T20:54:24 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:DashboardTests@757acd7b]" started-at="2025-01-02T21:39:13 IST" name="tearDown" finished-at="2025-01-02T21:39:13 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:DashboardTests@22555ebf]" started-at="2024-12-27T20:54:24 IST" name="setUp" finished-at="2024-12-27T20:54:29 IST" duration-ms="4802" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:DashboardTests@757acd7b]" started-at="2025-01-02T21:39:13 IST" name="setUp" finished-at="2025-01-02T21:39:22 IST" duration-ms="9035" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="validateWidgetVisibility()[pri:0, instance:DashboardTests@22555ebf]" started-at="2024-12-27T20:54:29 IST" name="validateWidgetVisibility" finished-at="2024-12-27T20:54:32 IST" duration-ms="3461" status="PASS">
+        <test-method signature="validateWidgetVisibility()[pri:0, instance:DashboardTests@757acd7b]" started-at="2025-01-02T21:39:22 IST" name="validateWidgetVisibility" finished-at="2025-01-02T21:39:27 IST" duration-ms="5590" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateWidgetVisibility -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:DashboardTests@22555ebf]" started-at="2024-12-27T20:54:32 IST" name="tearDown" finished-at="2024-12-27T20:54:32 IST" duration-ms="142" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:DashboardTests@757acd7b]" started-at="2025-01-02T21:39:27 IST" name="tearDown" finished-at="2025-01-02T21:39:28 IST" duration-ms="452" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:DashboardTests@22555ebf]" started-at="2024-12-27T20:54:32 IST" name="setUp" finished-at="2024-12-27T20:54:36 IST" duration-ms="4234" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:DashboardTests@757acd7b]" started-at="2025-01-02T21:39:28 IST" name="setUp" finished-at="2025-01-02T21:39:36 IST" duration-ms="8146" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyNavigationFromApplyLeaveWidget()[pri:0, instance:DashboardTests@22555ebf]" started-at="2024-12-27T20:54:36 IST" name="verifyNavigationFromApplyLeaveWidget" finished-at="2024-12-27T20:54:40 IST" duration-ms="3979" status="PASS">
+        <test-method signature="verifyNavigationFromApplyLeaveWidget()[pri:0, instance:DashboardTests@757acd7b]" started-at="2025-01-02T21:39:36 IST" name="verifyNavigationFromApplyLeaveWidget" finished-at="2025-01-02T21:39:41 IST" duration-ms="4925" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyNavigationFromApplyLeaveWidget -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:DashboardTests@22555ebf]" started-at="2024-12-27T20:54:40 IST" name="tearDown" finished-at="2024-12-27T20:54:41 IST" duration-ms="167" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:DashboardTests@757acd7b]" started-at="2025-01-02T21:39:41 IST" name="tearDown" finished-at="2025-01-02T21:39:42 IST" duration-ms="701" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- DashboardTests -->
+      <class name="AddWorkShiftTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:AddWorkShiftTest@5fd4f8f5]" started-at="2025-01-02T21:39:59 IST" name="setUp" finished-at="2025-01-02T21:40:11 IST" duration-ms="11089" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testAddWorkShift()[pri:0, instance:AddWorkShiftTest@5fd4f8f5]" started-at="2025-01-02T21:40:11 IST" name="testAddWorkShift" finished-at="2025-01-02T21:40:20 IST" duration-ms="9714" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddWorkShift -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AddWorkShiftTest@5fd4f8f5]" started-at="2025-01-02T21:40:20 IST" name="tearDown" finished-at="2025-01-02T21:40:21 IST" duration-ms="445" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- AddWorkShiftTest -->
     </test> <!-- Dashboard Tests -->
   </suite> <!-- OrangeHRM Test Suite -->
 </testng-results>

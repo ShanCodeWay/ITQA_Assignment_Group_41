@@ -12,6 +12,8 @@
             <class name="AddReportTest" />
             <class name="ApplyLeaveTest" />
             <class name="ValidateLeaveStatusTest" />
+            <class name="AddJobTitleTest" />
+            <class name="AddWorkShiftTest" />
         </classes>
     </test>
 </suite>
