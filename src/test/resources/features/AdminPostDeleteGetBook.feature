@@ -1,8 +1,8 @@
 Feature: Create, Retrieve, and Delete a Book
 
   Scenario: Admin creates, retrieves, and deletes a book
-    Given Admin has the base URI set to "http://localhost:7081"
-    And Admin authenticate as admin "admin" with password "password"
+    Given Admin has the base URI set to the "http://localhost:7081"
+    And Admin authenticate as admin the "admin" with password "password"
     When Admin create a book with title "Book Title" and author "Book Author"
     Then Admin should receive a create successful response with status code 201
     And Admin retrieve the book details with title "Book Title" and author "Book Author"

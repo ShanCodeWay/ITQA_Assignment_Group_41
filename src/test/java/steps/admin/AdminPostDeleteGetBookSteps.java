@@ -21,13 +21,13 @@ public class AdminPostDeleteGetBookSteps {
         this.commonValidationSteps = commonValidationSteps;
     }
 
-    @Given("Admin has the base URI set to {string}")
+    @Given("Admin has the base URI set to the {string}")
     public void Admin_have_the_base_uri_set_to(String baseUri) {
         RestAssured.baseURI = baseUri;
         System.out.println("Base URI is set to: " + baseUri);
     }
 
-    @Given("Admin authenticate as admin {string} with password {string}")
+    @Given("Admin authenticate as admin the {string} with password {string}")
     public void Admin_authenticate_as_admin_with_password(String admin, String password) {
         currentUsername = admin;
         currentPassword = password;

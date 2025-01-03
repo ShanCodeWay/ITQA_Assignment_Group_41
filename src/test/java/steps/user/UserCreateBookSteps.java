@@ -20,13 +20,13 @@ public class UserCreateBookSteps {
         this.commonValidationSteps = commonValidationSteps;
     }
 
-    @Given("User has the base URI set to {string}")
+    @Given("User has the base URI set to the {string}")
     public void setBaseUriuser(String baseUri) {
         RestAssured.baseURI = baseUri;
         System.out.println("Base URI set to: " + baseUri);
     }
 
-    @Given("User authenticate as {string} with password {string}")
+    @Given("User authenticate as the {string} with password {string}")
     public void authenticateUser(String username, String password) {
         currentUsername = username;
         currentPassword = password;
@@ -47,7 +47,7 @@ public class UserCreateBookSteps {
         commonValidationSteps.setLastResponse(lastResponse);
     }
 
-    @Then("User should receive a successful response with status code {int}")
+    @Then("User should receive a successful response with status code the {int}")
     public void verifySuccessfulcreateResponse(int expectedStatusCode) {
         int actualStatusCode = lastResponse.getStatusCode();
         assert actualStatusCode == expectedStatusCode :
