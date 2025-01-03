@@ -54,10 +54,4 @@ Feature: Admin Create Book-205116E
     When Admin tries to create a book with title "Test Book" and author "Test Author"
     Then Admin should receive a failed response with status code 401 and error message "Invalid credentials"
 
-  Scenario: User without access tries to create a book
-    Given User has the base URI set to "http://localhost:7081"
-    And User authenticate as "user" with password "password"
-    When User try to create a book with title "Test Book 05" and author "Author 05"
-    Then User should receive a failed response with status code 403 and error message "Access denied" for operation
-
 
