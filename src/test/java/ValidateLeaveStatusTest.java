@@ -42,6 +42,13 @@ public class ValidateLeaveStatusTest extends BaseTest {
         String leaveType = "CAN - FMLA";
         String expectedStatus = "Pending Approval (1.00)";
 
+        // Calculate the number of leave days dynamically
+//        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+//        LocalDate start = LocalDate.parse(startDate, formatter);
+//        LocalDate end = LocalDate.parse(endDate, formatter);
+//        long leaveDays = ChronoUnit.DAYS.between(start, end) + 1; // +1 to include the start day
+//        String expectedStatus = "Pending Approval (" + leaveDays + ".00)";
+
         // Input leave filters and search
         try {
             System.out.println("Entering start date...");

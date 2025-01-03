@@ -18,10 +18,10 @@ public class UserCreateBookSteps {
     private Response lastResponse;
     private String currentUsername;
     private String currentPassword;
-    private final CommonValidationSteps commonValidationSteps;
+    private final steps.API_Tests.CommonSteps commonSteps;
 
-    public UserCreateBookSteps(CommonValidationSteps commonValidationSteps) {
-        this.commonValidationSteps = commonValidationSteps;
+    public UserCreateBookSteps(steps.API_Tests.CommonSteps commonSteps) {
+        this.commonSteps = commonSteps;
     }
 
     @Given("User has the base URI set to the {string}")
@@ -39,47 +39,6 @@ public class UserCreateBookSteps {
     @When("User tries to create a book with title {string} and author {string}")
     public void UsercreateBook(String title, String author) {
 
-        boolean bookExists = checkIfBookExists(title);
-
-        if (bookExists) {
-            System.out.println("BUG DETECTED: The book with title '" + title + "' already exists.");
-            System.out.println("Skipping creation of this book to avoid duplication.");
-
-            lastResponse = given()
-                    .auth()
-                    .basic(currentUsername, currentPassword)
-                    .header("Content-Type", "application/json")
-                    .when()
-                    .get("/api/books");
-
-            commonValidationSteps.setLastResponse(lastResponse);
-            return;
-        }
-
-        if (title == null || title.isEmpty()) {
-            System.out.println("BUG DETECTED: Title is required.");
-            lastResponse = given()
-                    .auth()
-                    .basic(currentUsername, currentPassword)
-                    .header("Content-Type", "application/json")
-                    .when()
-                    .post("/api/books");
-            commonValidationSteps.setLastResponse(lastResponse);
-            return;
-        }
-
-        if (author == null || author.isEmpty()) {
-            System.out.println("BUG DETECTED: Author is required.");
-            lastResponse = given()
-                    .auth()
-                    .basic(currentUsername, currentPassword)
-                    .header("Content-Type", "application/json")
-                    .when()
-                    .post("/api/books");
-            commonValidationSteps.setLastResponse(lastResponse);
-            return;
-        }
-
         String bookData = "{ \"title\": \"" + title + "\", \"author\": \"" + author + "\" }";
         lastResponse = given()
                 .auth()
@@ -90,25 +49,7 @@ public class UserCreateBookSteps {
                 .post("/api/books");
 
         System.out.println("Create Book Response: " + lastResponse.getBody().asString());
-        commonValidationSteps.setLastResponse(lastResponse);
-    }
-
-    // Check if the book exists by title
-    private boolean checkIfBookExists(String title) {
-        Response response = given()
-                .auth()
-                .basic(currentUsername, currentPassword)
-                .header("Content-Type", "application/json")
-                .when()
-                .get("/api/books");
-
-        if (response.getStatusCode() != 200) {
-            System.err.println("Failed to fetch books. Status code: " + response.getStatusCode());
-            return false;
-        }
-
-        List<String> bookTitles = response.jsonPath().getList("title");
-        return bookTitles.contains(title);
+        commonSteps.setLastResponse(lastResponse);
     }
 
     @Then("User should receive a successful response with status code the {int}")
@@ -131,50 +72,21 @@ public class UserCreateBookSteps {
                 .post("/api/books");
 
         System.out.println("Create Book with Missing Title Response: " + lastResponse.getBody().asString());
-        commonValidationSteps.setLastResponse(lastResponse);
+        commonSteps.setLastResponse(lastResponse);
     }
-
-    @Then("User should receive a failed response with status code {int} and error message {string}")
-    public void verifycreateFailedResponse(int expectedStatusCode, String expectedErrorMessage) {
-        Assert.assertNotNull("No response received! Ensure setLastResponse() is called.", lastResponse);
-
-        int actualStatusCode = lastResponse.getStatusCode();
-        String responseBody = lastResponse.getBody().asString();
-        String actualErrorMessage = null;
-
-        try {
-            actualErrorMessage = lastResponse.jsonPath().getString("errorMessage");
-        } catch (Exception e) {
-            System.err.println("Failed to extract 'errorMessage' from response. Body might not be in JSON format.");
-        }
-
-        System.out.println("User should receive a failed response with status code " + expectedStatusCode + " and error message: " + expectedErrorMessage);
-        System.out.println("Actual response body: " + responseBody);
-
-        Assert.assertEquals("Unexpected status code received!", expectedStatusCode, actualStatusCode);
-
-        if (actualErrorMessage != null) {
-            Assert.assertTrue("Expected error message to contain '" + expectedErrorMessage + "' but got '" + actualErrorMessage + "'",
-                    actualErrorMessage.contains(expectedErrorMessage));
-        } else {
-            System.err.println("Error message not found in the response body!");
-        }
-    }
-
 
     @When("User tries to create a book without a title and without an author")
     public void userTriesToCreateABookWithoutATitleAndWithoutAnAuthor() {
-        String title = "";
-        String author = "";
         System.out.println("User tries to create a book without a title and without an author");
         lastResponse = given()
                 .auth()
                 .basic(currentUsername, currentPassword)
                 .header("Content-Type", "application/json")
-                .body("{\"title\": \"" + title + "\", \"author\": \"" + author + "\"}")
                 .when()
                 .post("/api/books");
-        commonValidationSteps.setLastResponse(lastResponse);
+        commonSteps.setLastResponse(lastResponse);
+        System.out.println("Response: " + lastResponse.asString());
+        System.out.println("Status Code: " + lastResponse.getStatusCode());
     }
 
     @When("User tries to create a book without an ID but with title {string} and author {string}")
@@ -187,13 +99,15 @@ public class UserCreateBookSteps {
                 .body("{\"title\": \"" + title + "\", \"author\": \"" + author + "\"}")
                 .when()
                 .post("/api/books");
-        commonValidationSteps.setLastResponse(lastResponse);
+        commonSteps.setLastResponse(lastResponse);
+        System.out.println("Response: " + lastResponse.asString());
+        System.out.println("Status Code: " + lastResponse.getStatusCode());
     }
 
     @When("User tries to create a book with title {string}, author {string}, and an invalid parameter {string} with value {string}")
     public void userTriesToCreateABookWithTitleAuthorAndAnInvalidParameterWithValue(String title, String author, String invalidParam, String invalidValue) {
         String bookData = String.format("{ \"title\": \"%s\", \"author\": \"%s\", \"%s\": \"%s\" }", title, author, invalidParam, invalidValue);
-        System.out.println("Payload with invalid parameter: " + bookData);
+        System.out.println("User tries to create a book with invalid parameter: " + bookData);
 
         lastResponse = given()
                 .auth()
@@ -203,8 +117,9 @@ public class UserCreateBookSteps {
                 .when()
                 .post("/api/books");
 
-        System.out.println("Response for request with invalid parameter: " + lastResponse.getBody().asString());
-        commonValidationSteps.setLastResponse(lastResponse);
+        commonSteps.setLastResponse(lastResponse);
+        System.out.println("Response: " + lastResponse.asString());
+        System.out.println("Status Code: " + lastResponse.getStatusCode());
     }
 
     @When("User tries to create a book with title {string}, and author {string} without credentials")
@@ -217,41 +132,57 @@ public class UserCreateBookSteps {
                 .when()
                 .post("/api/books");
 
+        commonSteps.setLastResponse(lastResponse);
         System.out.println("Response: " + lastResponse.asString());
         System.out.println("Status Code: " + lastResponse.getStatusCode());
-
-        commonValidationSteps.setLastResponse(lastResponse);
     }
 
     @When("User tries to create a book without a title and with author {string}")
     public void userTriesToCreateABookWithoutATitleAndWithAuthor(String author) {
-        String title = "";
         System.out.println("User tries to create a book without a title and with author " + author);
         lastResponse = given()
                 .auth()
                 .basic(currentUsername, currentPassword)
                 .header("Content-Type", "application/json")
-                .body("{\"title\": \"" + title + "\", \"author\": \"" + author + "\"}")
+                .body("{\" \"author\": \"" + author + "\"}")
                 .when()
                 .post("/api/books");
-        commonValidationSteps.setLastResponse(lastResponse);
+        commonSteps.setLastResponse(lastResponse);
         System.out.println("Response: " + lastResponse.asString());
+        System.out.println("Status Code: " + lastResponse.getStatusCode());
     }
 
     @When("User tries to create a book with title {string} and without an author")
     public void userTriesToCreateABookWithTitleAndWithoutAnAuthor(String title) {
-        String author = "";
         System.out.println("User tries to create a book with title '" + title + "' and without an author");
 
         lastResponse = given()
                 .auth()
                 .basic(currentUsername, currentPassword)
                 .header("Content-Type", "application/json")
-                .body("{\"title\": \"" + title + "\", \"author\": \"" + author + "\"}")
+                .body("{\"title\": \"" + title +  "\"}")
                 .when()
                 .post("/api/books");
 
-        commonValidationSteps.setLastResponse(lastResponse);
+        commonSteps.setLastResponse(lastResponse);
         System.out.println("Response: " + lastResponse.asString());
+        System.out.println("Status Code: " + lastResponse.getStatusCode());
+    }
+
+    @When("User tries to create a book with title {int} and author {string}")
+    public void userTriesToCreateABookWithTitleAndAuthor(int title, String author) {
+
+        String bookData = "{ \"title\": \"" + title + "\", \"author\": \"" + author + "\" }";
+        lastResponse = given()
+                .auth()
+                .basic(currentUsername, currentPassword)
+                .header("Content-Type", "application/json")
+                .body(bookData)
+                .when()
+                .post("/api/books");
+
+        commonSteps.setLastResponse(lastResponse);
+        System.out.println("Response: " + lastResponse.asString());
+        System.out.println("Status Code: " + lastResponse.getStatusCode());
     }
 }

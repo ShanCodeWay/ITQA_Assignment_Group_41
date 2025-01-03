@@ -65,7 +65,7 @@ public class ApplyLeaveTest extends BaseTest {
             WebElement dateInput = wait.until(ExpectedConditions.elementToBeClickable(
                     By.xpath("//input[@placeholder='yyyy-dd-mm']")));
             dateInput.clear();
-            dateInput.sendKeys("2025-07-01");
+            dateInput.sendKeys("2025-10-01");
             dateInput.sendKeys(Keys.TAB); // Close date picker
             System.out.println("Leave date entered.");
         } catch (Exception e) {
