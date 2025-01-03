@@ -1,8 +1,8 @@
-package steps.admin;
+package steps.user;
 
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import steps.CommonValidationSteps;
@@ -27,14 +27,14 @@ public class AdminPostDeleteGetBookSteps {
         System.out.println("Base URI is set to: " + baseUri);
     }
 
-    @Given("Admin authenticate as {string} with password {string}")
+    @Given("Admin authenticate as admin {string} with password {string}")
     public void Admin_authenticate_as_admin_with_password(String admin, String password) {
         currentUsername = admin;
         currentPassword = password;
     }
 
-    @When("Admin tries to create a book with title {string} and author {string}")
-    public void Admin_tries_to_create_a_book_with_title_and_author(String title, String author) {
+    @When("Admin create a book with title {string} and author {string}")
+    public void Admin_create_a_book_with_title_and_author(String title, String author) {
         String bookData = "{ \"title\": \"" + title + "\", \"author\": \"" + author + "\" }";
 
         lastResponse = given()
@@ -50,15 +50,15 @@ public class AdminPostDeleteGetBookSteps {
         commonValidationSteps.setLastResponse(lastResponse);
     }
 
-    @Then("Admin should receive a successful response with status code {int}")
-    public void Admin_should_receive_a_successful_response_with_status_code(Integer statusCode) {
+    @Then("Admin should receive a create successful response with status code {int}")
+    public void Admin_should_receive_a_create_successful_response_with_status_code(Integer statusCode) {
         System.out.println("Expected status code: " + statusCode);
         int actualStatusCode = lastResponse.getStatusCode();
         assert actualStatusCode == statusCode : "Expected status code " + statusCode + " but got " + actualStatusCode;
     }
 
-    @Then("Admin should retrieve the book details with title {string} and author {string}")
-    public void Admin_should_retrieve_the_book_details_with_title_and_author(String title, String author) {
+    @Then("Admin retrieve the book details with title {string} and author {string}")
+    public void Admin_retrieve_the_book_details_with_title_and_author(String title, String author) {
         lastResponse = given()
                 .auth()
                 .basic(currentUsername, currentPassword)
@@ -74,8 +74,8 @@ public class AdminPostDeleteGetBookSteps {
         assert retrievedAuthor.equals(author) : "Expected author " + author + " but got " + retrievedAuthor;
     }
 
-    @When("Admin tries to delete the book with id {int}")
-    public void Admin_tries_to_delete_the_book_with_id(int id) {
+    @When("Admin delete the book with id {int}")
+    public void Admin_delete_the_book_with_id(int id) {
         lastResponse = given()
                 .auth()
                 .basic(currentUsername, currentPassword)
