@@ -5,6 +5,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.nio.file.Paths;
 import java.time.Duration;
 
 public class AddJobTitleTest extends BaseTest {
@@ -69,11 +70,10 @@ public class AddJobTitleTest extends BaseTest {
 
             //  Upload Job Specification (File upload)
             try {
-                // Locate the file input element (usually of type "file")
                 WebElement fileUploadField = driver.findElement(By.xpath("//input[@type='file']"));
 
-                String filePath = "C:\\Users\\tharushi\\download.png";
-                fileUploadField.sendKeys(filePath);
+                String imagePath = Paths.get("src/test/java/steps/utils/download.png").toAbsolutePath().toString();
+                fileUploadField.sendKeys(imagePath);
 
                 System.out.println("Job specification file uploaded successfully.");
             } catch (Exception e) {
