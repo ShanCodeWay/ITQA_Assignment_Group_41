@@ -1,4 +1,4 @@
-Feature: User Delete Book
+Feature: User Delete Book - 205034B
 
   Scenario: User deletes a book
     Given User has the base URI set to "http://localhost:7081"
