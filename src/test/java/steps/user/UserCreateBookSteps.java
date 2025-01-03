@@ -130,4 +130,19 @@ public class UserCreateBookSteps {
         commonValidationSteps.setLastResponse(lastResponse);
     }
 
+    @When("User tries to create a book with title {string}, and author {string} without credentials")
+    public void userTriesToCreateABookWithTitleAndAuthorWithoutCredentials(String title, String author) {
+        System.out.println("User tries to create a book with title '" + title + "' and author '" + author + "' without providing credentials");
+
+        lastResponse = given()
+                .header("Content-Type", "application/json")
+                .body("{\"title\": \"" + title + "\", \"author\": \"" + author + "\"}")
+                .when()
+                .post("/api/books");
+
+        System.out.println("Response: " + lastResponse.asString());
+        System.out.println("Status Code: " + lastResponse.getStatusCode());
+
+        commonValidationSteps.setLastResponse(lastResponse);
+    }
 }
