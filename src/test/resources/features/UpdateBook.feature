@@ -10,7 +10,7 @@ Feature: Admin Update Book-205074V
     Given The API server is running
     And Admin authenticate as "admin" with password "password" for update operations
     When Admin tries to update a book with mismatched ID 2, title "Some Title", and author "Some Author"
-    Then Admin should receive a failed response with status code 404 and error message "Book id is not matched" for operation
+    Then Admin should receive a failed response with status code 400 and error message "Book id is not matched" for operation
 
   Scenario: Admin tries to update a book with missing title
     Given The API server is running
@@ -28,7 +28,7 @@ Feature: Admin Update Book-205074V
     Given The API server is running
     And Admin authenticate as "admin" with password "password" for update operations
     When Admin updates a book with ID 1, duplicate title "Duplicate Title", and author "Updated Author"
-    Then Admin should receive a failed response with status code 400 and error message "Book Title Already Exists" for operation
+    Then Admin should receive a failed response with status code 409 and error message "Book Title Already Exists" for operation
 
   Scenario: Admin tries to update a book with missing title and missing author
     Given The API server is running
