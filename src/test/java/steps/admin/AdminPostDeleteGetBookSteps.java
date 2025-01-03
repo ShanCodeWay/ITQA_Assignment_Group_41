@@ -1,4 +1,4 @@
-package steps.user;
+package steps.admin;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
