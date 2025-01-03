@@ -85,4 +85,49 @@ public class UserCreateBookSteps {
     }
 
 
+    @When("User tries to create a book without a title and without an author")
+    public void userTriesToCreateABookWithoutATitleAndWithoutAnAuthor() {
+        String title = "";
+        String author = "";
+        System.out.println("User tries to create a book without a title and without an author");
+        lastResponse = given()
+                .auth()
+                .basic(currentUsername, currentPassword)
+                .header("Content-Type", "application/json")
+                .body("{\"title\": \"" + title + "\", \"author\": \"" + author + "\"}")
+                .when()
+                .post("/api/books");
+        commonValidationSteps.setLastResponse(lastResponse);
+    }
+
+    @When("User tries to create a book without an ID but with title {string} and author {string}")
+    public void userTriesToCreateABookWithoutAnIDButWithTitleAndAuthor(String title, String author) {
+        System.out.println("User tries to create a book without an ID but with title " + title + " and author " + author);
+        lastResponse = given()
+                .auth()
+                .basic(currentUsername, currentPassword)
+                .header("Content-Type", "application/json")
+                .body("{\"title\": \"" + title + "\", \"author\": \"" + author + "\"}")
+                .when()
+                .post("/api/books");
+        commonValidationSteps.setLastResponse(lastResponse);
+    }
+
+    @When("User tries to create a book with title {string}, author {string}, and an invalid parameter {string} with value {string}")
+    public void userTriesToCreateABookWithTitleAuthorAndAnInvalidParameterWithValue(String title, String author, String invalidParam, String invalidValue) {
+        String bookData = String.format("{ \"title\": \"%s\", \"author\": \"%s\", \"%s\": \"%s\" }", title, author, invalidParam, invalidValue);
+        System.out.println("Payload with invalid parameter: " + bookData);
+
+        lastResponse = given()
+                .auth()
+                .basic(currentUsername, currentPassword)
+                .header("Content-Type", "application/json")
+                .body(bookData)
+                .when()
+                .post("/api/books");
+
+        System.out.println("Response for request with invalid parameter: " + lastResponse.getBody().asString());
+        commonValidationSteps.setLastResponse(lastResponse);
+    }
+
 }
