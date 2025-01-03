@@ -4,6 +4,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import java.nio.file.Paths;
 
 import java.time.Duration;
 
@@ -59,7 +60,7 @@ public class AddEmployeeTest extends BaseTest {
 
                 // Enter text in the Username textbox
                 System.out.println("Entering username...");
-                usernameField.sendKeys("test_user");
+                usernameField.sendKeys("test_user2");
                 System.out.println("Username entered successfully.");
 
                 // Select "Enabled" or "Disabled" radio button
@@ -71,12 +72,12 @@ public class AddEmployeeTest extends BaseTest {
                 // Enter text in Password and Confirm Password textboxes
                 System.out.println("Entering password...");
                 WebElement passwordField = driver.findElement(By.xpath("/html/body/div/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]/div[4]/div/div[1]/div/div[2]/input"));
-                passwordField.sendKeys("SecurePassword123");
+                passwordField.sendKeys("SecurePassword1232");
                 System.out.println("Password entered successfully.");
 
                 System.out.println("Confirming password...");
                 WebElement confirmPasswordField = driver.findElement(By.xpath("/html/body/div/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]/div[4]/div/div[2]/div/div[2]/input"));
-                confirmPasswordField.sendKeys("SecurePassword123");
+                confirmPasswordField.sendKeys("SecurePassword1232");
                 System.out.println("Confirm password entered successfully.");
 
             } catch (Exception e) {
@@ -90,7 +91,7 @@ public class AddEmployeeTest extends BaseTest {
                 WebElement uploadElement = driver.findElement(By.xpath("//input[@type='file']"));
 
                 // Provide the absolute path to the image file
-                String imagePath = "C:\\Users\\thamodhya\\Downloads\\download.jpg";
+                String imagePath = Paths.get("src/test/java/steps/utils/image.png").toAbsolutePath().toString();
                 uploadElement.sendKeys(imagePath);
 
                 System.out.println("Image uploaded successfully.");
