@@ -26,7 +26,7 @@ public class Recruitment extends BaseTest {
 
             System.out.println("Entering candidate name in the search field...");
             WebElement searchField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='app']/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[2]/div/div[1]/div/div[2]/div/div/input")));
-            searchField.sendKeys("Md. Abir Hossen");
+            searchField.sendKeys("John Doe");
 
             System.out.println("Clicking on Search button...");
             WebElement searchButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='app']/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[4]/button[2]")));
@@ -39,8 +39,8 @@ public class Recruitment extends BaseTest {
                 System.out.println("Candidate found.");
                 System.out.println("Candidate Name: " + candidateRow.getText());
             } catch (TimeoutException e) {
-                System.err.println("Candidate not found in search results. Failing the test.");
-                Assert.fail("Expected candidate ' John Doe' was not found in the search results.");
+                System.err.println("BUG: Candidate 'John Doe' exists but was not displayed in the search results. This is a potential issue.");
+                Assert.fail("BUG: Expected candidate 'John Doe' was not found in the search results even though they exist.");
             }
         } catch (Exception e) {
             System.err.println("Error during candidate search: " + e.getMessage());
