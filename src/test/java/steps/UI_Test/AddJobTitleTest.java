@@ -73,8 +73,8 @@ public class AddJobTitleTest extends BaseTest {
             //  Upload Job Specification (File upload)
             try {
                 WebElement fileUploadField = driver.findElement(By.xpath("//input[@type='file']"));
-
-                String imagePath = Paths.get("src/test/java/steps/UI_Tests/utils/download.png").toAbsolutePath().toString();
+                
+                String imagePath = Paths.get("src/test/java/steps/UI_Test/utils/download.png").toAbsolutePath().toString();
                 fileUploadField.sendKeys(imagePath);
 
                 System.out.println("Job specification file uploaded successfully.");
