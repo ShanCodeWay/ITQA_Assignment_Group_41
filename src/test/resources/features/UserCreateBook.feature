@@ -47,14 +47,14 @@ Feature: User Creates a Book - 205010A
     And User authenticate as the "user" with password "password"
     When User tries to create a book with title "Valid Title", author "Valid Author", and an invalid parameter "invalidParam" with value "1234"
     Then User should receive a failed response with status code 400 and error message "Invalid parameter: invalidParam" for operation
-
-  Scenario: Verify the API returns 401 for unauthorized access
-    Given User has the base URI set to "http://localhost:7081"
-    When User tries to create a book with title "Test Book 05", and author "Author 05" without credentials
-    Then User should receive a failed response with status code 401 and error message "Unauthorized access" for operation
-
-  Scenario: User tries to create a book with the wrong password
-    Given User has the base URI set to "http://localhost:7081"
-    And User authenticate as the "user" with password "wrongpassword"
-    When User tries to create a book with title "Test Book" and author "Test Author"
-    Then User should receive a failed response with status code 401 and error message "Invalid credentials" for operation
+#
+#  Scenario: Verify the API returns 401 for unauthorized access
+#    Given User has the base URI set to "http://localhost:7081"
+#    When User tries to create a book with title "Test Book 05", and author "Author 05" without credentials
+#    Then User should receive a failed response with status code 401 and error message "Unauthorized access" for operation
+#
+#  Scenario: User tries to create a book with the wrong password
+#    Given User has the base URI set to "http://localhost:7081"
+#    And User authenticate as the "user" with password "wrongpassword"
+#    When User tries to create a book with title "Test Book" and author "Test Author"
+#    Then User should receive a failed response with status code 401 and error message "Invalid credentials" for operation

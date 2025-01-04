@@ -9,14 +9,76 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">OrangeHRM Test Suite</th></tr>
-<tr><td><a href="#t0">Dashboard Tests</a></td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">102,263</td><td></td><td></td></tr>
+<tr><td><a href="#t0">UI Tests</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num attn">7</td><td class="num">301,262</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">OrangeHRM Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Dashboard Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">AddJobTitleTest</td><td><a href="#m0">testAddJobTitle</a></td><td rowspan="1">1735834190290</td><td rowspan="1">8694</td></tr><tr class="passedodd"><td rowspan="1">AddWorkShiftTest</td><td><a href="#m1">testAddWorkShift</a></td><td rowspan="1">1735834211066</td><td rowspan="1">9714</td></tr><tr class="passedeven"><td rowspan="3">DashboardTests</td><td><a href="#m2">validateWidgetNavigation</a></td><td rowspan="1">1735834135920</td><td rowspan="1">17285</td></tr><tr class="passedeven"><td><a href="#m3">validateWidgetVisibility</a></td><td rowspan="1">1735834162254</td><td rowspan="1">5590</td></tr><tr class="passedeven"><td><a href="#m4">verifyNavigationFromApplyLeaveWidget</a></td><td rowspan="1">1735834176447</td><td rowspan="1">4925</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">OrangeHRM Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">UI Tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">steps.UI_Test.AddEmployeeTest</td><td><a href="#m0">testAddEmployee</a></td><td rowspan="1">1735960122628</td><td rowspan="1">36850</td></tr><tr class="failedodd"><td rowspan="1">steps.UI_Test.AddReportTest</td><td><a href="#m1">testAddReportNavigation</a></td><td rowspan="1">1735960163544</td><td rowspan="1">37181</td></tr><tr class="failedeven"><td rowspan="1">steps.UI_Test.AddTimesheetTest</td><td><a href="#m2">testAddTimesheet</a></td><td rowspan="1">1735960315926</td><td rowspan="1">34552</td></tr><tr class="failedodd"><td rowspan="1">steps.UI_Test.AddWorkShiftTest</td><td><a href="#m3">testAddWorkShift</a></td><td rowspan="1">1735960277791</td><td rowspan="1">34034</td></tr><tr class="failedeven"><td rowspan="1">steps.UI_Test.ApplyLeaveTest</td><td><a href="#m4">testApplyLeave</a></td><td rowspan="1">1735960205963</td><td rowspan="1">25362</td></tr><tr class="failedodd"><td rowspan="1">steps.UI_Test.AproveTimesheetTest</td><td><a href="#m5">testAproveTimesheet</a></td><td rowspan="1">1735960354538</td><td rowspan="1">35494</td></tr><tr class="failedeven"><td rowspan="1">steps.UI_Test.ValidateLeaveStatusTest</td><td><a href="#m6">testValidateLeaveStatus</a></td><td rowspan="1">1735960237957</td><td rowspan="1">25908</td></tr><tr><th colspan="4">UI Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">steps.UI_Test.AddJobTitleTest</td><td><a href="#m7">testAddJobTitle</a></td><td rowspan="1">1735960267891</td><td rowspan="1">5792</td></tr><tr class="passedodd"><td rowspan="3">steps.UI_Test.DashboardTest</td><td><a href="#m8">validateWidgetNavigation</a></td><td rowspan="1">1735960093368</td><td rowspan="1">9958</td></tr><tr class="passedodd"><td><a href="#m9">validateWidgetVisibility</a></td><td rowspan="1">1735960108022</td><td rowspan="1">2376</td></tr><tr class="passedodd"><td><a href="#m10">verifyNavigationFromApplyLeaveWidget</a></td><td rowspan="1">1735960114602</td><td rowspan="1">3738</td></tr></tbody>
 </table>
-<h2>Dashboard Tests</h2><h3 id="m0">AddJobTitleTest#testAddJobTitle</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">AddWorkShiftTest#testAddWorkShift</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">DashboardTests#validateWidgetNavigation</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">DashboardTests#validateWidgetVisibility</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">DashboardTests#verifyNavigationFromApplyLeaveWidget</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>UI Tests</h2><h3 id="m0">steps.UI_Test.AddEmployeeTest#testAddEmployee</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError:
+    Failed to verify employee addition.
+    at steps.UI_Test.AddEmployeeTest.testAddEmployee(AddEmployeeTest.java:143)
+    at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+    at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+    at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+    at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+    at java.base/java.lang.Thread.run(Thread.java:842)
+    ... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">steps.UI_Test.AddReportTest#testAddReportNavigation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError:
+    Failed to verify report addition.
+    at steps.UI_Test.AddReportTest.testAddReportNavigation(AddReportTest.java:172)
+    at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+    at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+    at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+    at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+    at java.base/java.lang.Thread.run(Thread.java:842)
+    ... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">steps.UI_Test.AddTimesheetTest#testAddTimesheet</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError:
+    Selecting first option failed...
+    at steps.UI_Test.AddTimesheetTest.testAddTimesheet(AddTimesheetTest.java:53)
+    at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+    at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+    at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+    at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+    at java.base/java.lang.Thread.run(Thread.java:842)
+    ... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">steps.UI_Test.AddWorkShiftTest#testAddWorkShift</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError:
+    Navigation to Work Shifts failed.
+    at steps.UI_Test.AddWorkShiftTest.testAddWorkShift(AddWorkShiftTest.java:45)
+    at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+    at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+    at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+    at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+    at java.base/java.lang.Thread.run(Thread.java:842)
+    ... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">steps.UI_Test.ApplyLeaveTest#testApplyLeave</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError:
+    Leave date entry failed.
+    at steps.UI_Test.ApplyLeaveTest.testApplyLeave(ApplyLeaveTest.java:74)
+    at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+    at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+    at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+    at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+    at java.base/java.lang.Thread.run(Thread.java:842)
+    ... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">steps.UI_Test.AproveTimesheetTest#testAproveTimesheet</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError:
+    Approving timesheet failed...
+    at steps.UI_Test.AproveTimesheetTest.testAproveTimesheet(AproveTimesheetTest.java:51)
+    at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+    at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+    at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+    at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+    at java.base/java.lang.Thread.run(Thread.java:842)
+    ... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">steps.UI_Test.ValidateLeaveStatusTest#testValidateLeaveStatus</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError:
+    Leave filter input failed.
+    at steps.UI_Test.ValidateLeaveStatusTest.testValidateLeaveStatus(ValidateLeaveStatusTest.java:85)
+    at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+    at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+    at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+    at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+    at java.base/java.lang.Thread.run(Thread.java:842)
+    ... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">steps.UI_Test.AddJobTitleTest#testAddJobTitle</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">steps.UI_Test.DashboardTest#validateWidgetNavigation</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">steps.UI_Test.DashboardTest#validateWidgetVisibility</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">steps.UI_Test.DashboardTest#verifyNavigationFromApplyLeaveWidget</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

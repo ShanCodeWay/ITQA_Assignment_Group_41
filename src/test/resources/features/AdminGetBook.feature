@@ -21,12 +21,12 @@ Feature: Admin Retrieve Book-205116E
     When Admin tries to retrieve a non-existent book with ID 9999
     Then Admin should receive a failed response with status code 404 and error message "Book not found"
 
-  # Scenario to retrieve a book without providing an ID
-  Scenario: Admin tries to retrieve a book with an empty ID
-    Given Admin has set the base URI to "http://localhost:7081"
-    And Admin is authenticated with username "admin" and password "password"
-    When Admin tries to retrieve a book with an empty ID
-    Then Admin should receive a failed response with status code 400 and error message "ID is required"
+  Scenario: Admin tries to create a book without both title and author
+    Given Admin has the base URI set to "http://localhost:7081"
+    And Admin authenticate as "admin" with password "password"
+    When Admin tries to create a book without a title and without an author
+    Then Admin should receive a failed response with status code 400 and error message "Title and Author are required"
+
 
 #  # Scenario to retrieve a book with invalid data type for ID
 #  Scenario: Admin tries to retrieve a book with ID "abc"
