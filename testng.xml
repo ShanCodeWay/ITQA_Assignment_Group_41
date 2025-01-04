@@ -7,15 +7,15 @@
 
     <test name="UI Tests">
         <classes>
-            <class name="steps.UI_Test.DashboardTest" />
-            <class name="steps.UI_Test.AddEmployeeTest" />
-            <class name="steps.UI_Test.AddReportTest" />
-            <class name="steps.UI_Test.ApplyLeaveTest" />
-            <class name="steps.UI_Test.ValidateLeaveStatusTest" />
-            <class name="steps.UI_Test.AddJobTitleTest" />
-            <class name="steps.UI_Test.AddWorkShiftTest" />
-            <class name="steps.UI_Test.AddTimesheetTest" />
-            <class name="steps.UI_Test.AproveTimesheetTest" />
+            <class name="DashboardTests" />
+            <class name="AddEmployeeTest" />
+            <class name="AddReportTest" />
+            <class name="ApplyLeaveTest" />
+            <class name="ValidateLeaveStatusTest" />
+            <class name="AddJobTitleTest" />
+            <class name="AddWorkShiftTest" />
+            <class name="AddTimesheetTest" />
+            <class name="AproveTimesheetTest" />
         </classes>
     </test>
 </suite>

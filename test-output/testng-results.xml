@@ -1,392 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="11" passed="4" failed="7" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-04T08:38:08 IST" name="OrangeHRM Test Suite" finished-at="2025-01-04T08:43:10 IST" duration-ms="301262">
+  <suite started-at="2025-01-02T21:38:38 IST" name="OrangeHRM Test Suite" finished-at="2025-01-02T21:40:21 IST" duration-ms="102263">
     <groups>
     </groups>
-    <test started-at="2025-01-04T08:38:08 IST" name="UI Tests" finished-at="2025-01-04T08:43:10 IST" duration-ms="301262">
-      <class name="steps.UI_Test.ValidateLeaveStatusTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:steps.UI_Test.ValidateLeaveStatusTest@74e52ef6]" started-at="2025-01-04T08:40:31 IST" name="setUp" finished-at="2025-01-04T08:40:37 IST" duration-ms="6482" status="PASS">
+    <test started-at="2025-01-02T21:38:38 IST" name="Dashboard Tests" finished-at="2025-01-02T21:40:21 IST" duration-ms="102263">
+      <class name="AddJobTitleTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:AddJobTitleTest@62230c58]" started-at="2025-01-02T21:39:42 IST" name="setUp" finished-at="2025-01-02T21:39:50 IST" duration-ms="8210" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testValidateLeaveStatus()[pri:0, instance:steps.UI_Test.ValidateLeaveStatusTest@74e52ef6]" started-at="2025-01-04T08:40:37 IST" name="testValidateLeaveStatus" finished-at="2025-01-04T08:41:03 IST" duration-ms="25908" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Leave filter input failed.]]>
-            </message>
-            <full-stacktrace>
-                <![CDATA[java.lang.AssertionError: Leave filter input failed.
-at org.testng.Assert.fail(Assert.java:111)
-at steps.UI_Test.ValidateLeaveStatusTest.testValidateLeaveStatus(ValidateLeaveStatusTest.java:85)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testValidateLeaveStatus -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:steps.UI_Test.ValidateLeaveStatusTest@74e52ef6]" started-at="2025-01-04T08:41:03 IST" name="tearDown" finished-at="2025-01-04T08:41:04 IST" duration-ms="136" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- steps.UI_Test.ValidateLeaveStatusTest -->
-      <class name="steps.UI_Test.ApplyLeaveTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:steps.UI_Test.ApplyLeaveTest@62ddbd7e]" started-at="2025-01-04T08:40:00 IST" name="setUp" finished-at="2025-01-04T08:40:05 IST" duration-ms="5100" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="testApplyLeave()[pri:0, instance:steps.UI_Test.ApplyLeaveTest@62ddbd7e]" started-at="2025-01-04T08:40:05 IST" name="testApplyLeave" finished-at="2025-01-04T08:40:31 IST" duration-ms="25362" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Leave date entry failed.]]>
-            </message>
-            <full-stacktrace>
-                <![CDATA[java.lang.AssertionError: Leave date entry failed.
-at org.testng.Assert.fail(Assert.java:111)
-at steps.UI_Test.ApplyLeaveTest.testApplyLeave(ApplyLeaveTest.java:74)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testApplyLeave -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:steps.UI_Test.ApplyLeaveTest@62ddbd7e]" started-at="2025-01-04T08:40:31 IST" name="tearDown" finished-at="2025-01-04T08:40:31 IST" duration-ms="148" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- steps.UI_Test.ApplyLeaveTest -->
-      <class name="steps.UI_Test.AddJobTitleTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:steps.UI_Test.AddJobTitleTest@6ed3ccb2]" started-at="2025-01-04T08:41:04 IST" name="setUp" finished-at="2025-01-04T08:41:07 IST" duration-ms="3889" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="testAddJobTitle()[pri:0, instance:steps.UI_Test.AddJobTitleTest@6ed3ccb2]" started-at="2025-01-04T08:41:07 IST" name="testAddJobTitle" finished-at="2025-01-04T08:41:13 IST" duration-ms="5792" status="PASS">
+        <test-method signature="testAddJobTitle()[pri:0, instance:AddJobTitleTest@62230c58]" started-at="2025-01-02T21:39:50 IST" name="testAddJobTitle" finished-at="2025-01-02T21:39:58 IST" duration-ms="8694" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAddJobTitle -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:steps.UI_Test.AddJobTitleTest@6ed3ccb2]" started-at="2025-01-04T08:41:13 IST" name="tearDown" finished-at="2025-01-04T08:41:13 IST" duration-ms="138" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AddJobTitleTest@62230c58]" started-at="2025-01-02T21:39:58 IST" name="tearDown" finished-at="2025-01-02T21:39:59 IST" duration-ms="991" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- steps.UI_Test.AddJobTitleTest -->
-      <class name="steps.UI_Test.AproveTimesheetTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:steps.UI_Test.AproveTimesheetTest@489115ef]" started-at="2025-01-04T08:42:30 IST" name="setUp" finished-at="2025-01-04T08:42:34 IST" duration-ms="3924" status="PASS">
+      </class> <!-- AddJobTitleTest -->
+      <class name="DashboardTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:DashboardTests@757acd7b]" started-at="2025-01-02T21:38:39 IST" name="setUp" finished-at="2025-01-02T21:38:55 IST" duration-ms="16885" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testAproveTimesheet()[pri:0, instance:steps.UI_Test.AproveTimesheetTest@489115ef]" started-at="2025-01-04T08:42:34 IST" name="testAproveTimesheet" finished-at="2025-01-04T08:43:10 IST" duration-ms="35494" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Approving timesheet failed...]]>
-            </message>
-            <full-stacktrace>
-                <![CDATA[java.lang.AssertionError: Approving timesheet failed...
-at org.testng.Assert.fail(Assert.java:111)
-at steps.UI_Test.AproveTimesheetTest.testAproveTimesheet(AproveTimesheetTest.java:51)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAproveTimesheet -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:steps.UI_Test.AproveTimesheetTest@489115ef]" started-at="2025-01-04T08:43:10 IST" name="tearDown" finished-at="2025-01-04T08:43:10 IST" duration-ms="134" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- steps.UI_Test.AproveTimesheetTest -->
-      <class name="steps.UI_Test.DashboardTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:steps.UI_Test.DashboardTest@6c6cb480]" started-at="2025-01-04T08:38:08 IST" name="setUp" finished-at="2025-01-04T08:38:13 IST" duration-ms="4430" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="validateWidgetNavigation()[pri:0, instance:steps.UI_Test.DashboardTest@6c6cb480]" started-at="2025-01-04T08:38:13 IST" name="validateWidgetNavigation" finished-at="2025-01-04T08:38:23 IST" duration-ms="9958" status="PASS">
+        <test-method signature="validateWidgetNavigation()[pri:0, instance:DashboardTests@757acd7b]" started-at="2025-01-02T21:38:55 IST" name="validateWidgetNavigation" finished-at="2025-01-02T21:39:13 IST" duration-ms="17285" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateWidgetNavigation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:steps.UI_Test.DashboardTest@6c6cb480]" started-at="2025-01-04T08:38:23 IST" name="tearDown" finished-at="2025-01-04T08:38:23 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:DashboardTests@757acd7b]" started-at="2025-01-02T21:39:13 IST" name="tearDown" finished-at="2025-01-02T21:39:13 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:steps.UI_Test.DashboardTest@6c6cb480]" started-at="2025-01-04T08:38:23 IST" name="setUp" finished-at="2025-01-04T08:38:28 IST" duration-ms="4694" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:DashboardTests@757acd7b]" started-at="2025-01-02T21:39:13 IST" name="setUp" finished-at="2025-01-02T21:39:22 IST" duration-ms="9035" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="validateWidgetVisibility()[pri:0, instance:steps.UI_Test.DashboardTest@6c6cb480]" started-at="2025-01-04T08:38:28 IST" name="validateWidgetVisibility" finished-at="2025-01-04T08:38:30 IST" duration-ms="2376" status="PASS">
+        <test-method signature="validateWidgetVisibility()[pri:0, instance:DashboardTests@757acd7b]" started-at="2025-01-02T21:39:22 IST" name="validateWidgetVisibility" finished-at="2025-01-02T21:39:27 IST" duration-ms="5590" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateWidgetVisibility -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:steps.UI_Test.DashboardTest@6c6cb480]" started-at="2025-01-04T08:38:30 IST" name="tearDown" finished-at="2025-01-04T08:38:30 IST" duration-ms="121" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:DashboardTests@757acd7b]" started-at="2025-01-02T21:39:27 IST" name="tearDown" finished-at="2025-01-02T21:39:28 IST" duration-ms="452" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:steps.UI_Test.DashboardTest@6c6cb480]" started-at="2025-01-04T08:38:30 IST" name="setUp" finished-at="2025-01-04T08:38:34 IST" duration-ms="4082" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:DashboardTests@757acd7b]" started-at="2025-01-02T21:39:28 IST" name="setUp" finished-at="2025-01-02T21:39:36 IST" duration-ms="8146" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyNavigationFromApplyLeaveWidget()[pri:0, instance:steps.UI_Test.DashboardTest@6c6cb480]" started-at="2025-01-04T08:38:34 IST" name="verifyNavigationFromApplyLeaveWidget" finished-at="2025-01-04T08:38:38 IST" duration-ms="3738" status="PASS">
+        <test-method signature="verifyNavigationFromApplyLeaveWidget()[pri:0, instance:DashboardTests@757acd7b]" started-at="2025-01-02T21:39:36 IST" name="verifyNavigationFromApplyLeaveWidget" finished-at="2025-01-02T21:39:41 IST" duration-ms="4925" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyNavigationFromApplyLeaveWidget -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:steps.UI_Test.DashboardTest@6c6cb480]" started-at="2025-01-04T08:38:38 IST" name="tearDown" finished-at="2025-01-04T08:38:38 IST" duration-ms="164" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:DashboardTests@757acd7b]" started-at="2025-01-02T21:39:41 IST" name="tearDown" finished-at="2025-01-02T21:39:42 IST" duration-ms="701" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- steps.UI_Test.DashboardTest -->
-      <class name="steps.UI_Test.AddEmployeeTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:steps.UI_Test.AddEmployeeTest@7eac9008]" started-at="2025-01-04T08:38:38 IST" name="setUp" finished-at="2025-01-04T08:38:42 IST" duration-ms="4122" status="PASS">
+      </class> <!-- DashboardTests -->
+      <class name="AddWorkShiftTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:AddWorkShiftTest@5fd4f8f5]" started-at="2025-01-02T21:39:59 IST" name="setUp" finished-at="2025-01-02T21:40:11 IST" duration-ms="11089" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testAddEmployee()[pri:0, instance:steps.UI_Test.AddEmployeeTest@7eac9008]" started-at="2025-01-04T08:38:42 IST" name="testAddEmployee" finished-at="2025-01-04T08:39:19 IST" duration-ms="36850" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Failed to verify employee addition.]]>
-            </message>
-            <full-stacktrace>
-                <![CDATA[java.lang.AssertionError: Failed to verify employee addition.
-at org.testng.Assert.fail(Assert.java:111)
-at steps.UI_Test.AddEmployeeTest.testAddEmployee(AddEmployeeTest.java:143)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAddEmployee -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:steps.UI_Test.AddEmployeeTest@7eac9008]" started-at="2025-01-04T08:39:19 IST" name="tearDown" finished-at="2025-01-04T08:39:19 IST" duration-ms="143" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- steps.UI_Test.AddEmployeeTest -->
-      <class name="steps.UI_Test.AddTimesheetTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:steps.UI_Test.AddTimesheetTest@15de0b3c]" started-at="2025-01-04T08:41:51 IST" name="setUp" finished-at="2025-01-04T08:41:55 IST" duration-ms="3965" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="testAddTimesheet()[pri:0, instance:steps.UI_Test.AddTimesheetTest@15de0b3c]" started-at="2025-01-04T08:41:55 IST" name="testAddTimesheet" finished-at="2025-01-04T08:42:30 IST" duration-ms="34552" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Selecting first option failed...]]>
-            </message>
-            <full-stacktrace>
-                <![CDATA[java.lang.AssertionError: Selecting first option failed...
-at org.testng.Assert.fail(Assert.java:111)
-at steps.UI_Test.AddTimesheetTest.testAddTimesheet(AddTimesheetTest.java:53)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAddTimesheet -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:steps.UI_Test.AddTimesheetTest@15de0b3c]" started-at="2025-01-04T08:42:30 IST" name="tearDown" finished-at="2025-01-04T08:42:30 IST" duration-ms="133" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- steps.UI_Test.AddTimesheetTest -->
-      <class name="steps.UI_Test.AddWorkShiftTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:steps.UI_Test.AddWorkShiftTest@1a677343]" started-at="2025-01-04T08:41:13 IST" name="setUp" finished-at="2025-01-04T08:41:17 IST" duration-ms="3969" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="testAddWorkShift()[pri:0, instance:steps.UI_Test.AddWorkShiftTest@1a677343]" started-at="2025-01-04T08:41:17 IST" name="testAddWorkShift" finished-at="2025-01-04T08:41:51 IST" duration-ms="34034" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Navigation to Work Shifts failed.]]>
-            </message>
-            <full-stacktrace>
-                <![CDATA[java.lang.AssertionError: Navigation to Work Shifts failed.
-at org.testng.Assert.fail(Assert.java:111)
-at steps.UI_Test.AddWorkShiftTest.testAddWorkShift(AddWorkShiftTest.java:45)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="testAddWorkShift()[pri:0, instance:AddWorkShiftTest@5fd4f8f5]" started-at="2025-01-02T21:40:11 IST" name="testAddWorkShift" finished-at="2025-01-02T21:40:20 IST" duration-ms="9714" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAddWorkShift -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:steps.UI_Test.AddWorkShiftTest@1a677343]" started-at="2025-01-04T08:41:51 IST" name="tearDown" finished-at="2025-01-04T08:41:51 IST" duration-ms="136" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:AddWorkShiftTest@5fd4f8f5]" started-at="2025-01-02T21:40:20 IST" name="tearDown" finished-at="2025-01-02T21:40:21 IST" duration-ms="445" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- steps.UI_Test.AddWorkShiftTest -->
-      <class name="steps.UI_Test.AddReportTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:steps.UI_Test.AddReportTest@4116aac9]" started-at="2025-01-04T08:39:19 IST" name="setUp" finished-at="2025-01-04T08:39:23 IST" duration-ms="3917" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="testAddReportNavigation()[pri:0, instance:steps.UI_Test.AddReportTest@4116aac9]" started-at="2025-01-04T08:39:23 IST" name="testAddReportNavigation" finished-at="2025-01-04T08:40:00 IST" duration-ms="37181" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Failed to verify report addition.]]>
-            </message>
-            <full-stacktrace>
-                <![CDATA[java.lang.AssertionError: Failed to verify report addition.
-at org.testng.Assert.fail(Assert.java:111)
-at steps.UI_Test.AddReportTest.testAddReportNavigation(AddReportTest.java:172)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAddReportNavigation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:steps.UI_Test.AddReportTest@4116aac9]" started-at="2025-01-04T08:40:00 IST" name="tearDown" finished-at="2025-01-04T08:40:00 IST" duration-ms="136" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- steps.UI_Test.AddReportTest -->
-    </test> <!-- UI Tests -->
+      </class> <!-- AddWorkShiftTest -->
+    </test> <!-- Dashboard Tests -->
   </suite> <!-- OrangeHRM Test Suite -->
 </testng-results>
