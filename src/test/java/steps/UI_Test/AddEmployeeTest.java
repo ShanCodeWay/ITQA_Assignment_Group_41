@@ -93,7 +93,7 @@ public class AddEmployeeTest extends BaseTest {
                 WebElement uploadElement = driver.findElement(By.xpath("//input[@type='file']"));
 
                 // Provide the absolute path to the image file
-                String imagePath = Paths.get("src/test/java/steps/UI_Tests/utils/image.png").toAbsolutePath().toString();
+                String imagePath = Paths.get("src/test/java/steps/UI_Test/utils/image.png").toAbsolutePath().toString();
                 uploadElement.sendKeys(imagePath);
 
                 System.out.println("Image uploaded successfully.");
